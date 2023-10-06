@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Tech Blog</title>
+    <link rel="stylesheet" href="/css/jass.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tech Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {{#if logged_in}}
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+        <main>
+            {{{ body }}}
+        </main>
+    </header>
+
+
+
+    <footer>
+        <p>&copy; 2023 Abigail's MVC Tech Blog. </p>
+    </footer>
+</body>
+</html>
